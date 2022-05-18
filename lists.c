@@ -11,6 +11,10 @@
 list_t *add_node_end(list_t **head, const char *name, const char *value)
 {
 	list_t *trav, *new;
+<<<<<<< HEAD
+=======
+	int index = 0;
+>>>>>>> 17f1fca40dd2bdcb9a987111c954833d17d211bf
 
 	if (head == NULL || name == NULL || value == NULL)
 		return (NULL);
@@ -31,7 +35,16 @@ list_t *add_node_end(list_t **head, const char *name, const char *value)
 
 	/* traverse to the end of the list */
 	while (trav->next != NULL)
+<<<<<<< HEAD
 	  trav = trav->next;
+=======
+	{
+		index++;
+		trav = trav->next;
+	}
+
+	new->index = index;
+>>>>>>> 17f1fca40dd2bdcb9a987111c954833d17d211bf
 	trav->next = new;
 
 	return (*head);
@@ -60,10 +73,18 @@ size_t list_len(const list_t *h)
  * create_node - creates a new list_t node
  * @name: value of the name field
  * @value: value of the value field
+<<<<<<< HEAD
  *
  * Return: address of new node. Otherwise NULL
  */
 list_t *create_node(const char *name, const char *value)
+=======
+ * @index: index of the new node
+ *
+ * Return: address of new node. Otherwise NULL
+ */
+list_t *create_node(const char *name, const char *value, int index)
+>>>>>>> 17f1fca40dd2bdcb9a987111c954833d17d211bf
 {
 	list_t *new;
 
@@ -76,6 +97,10 @@ list_t *create_node(const char *name, const char *value)
 
 	new->name = _strdup(name);
 	new->value = _strdup(value);
+<<<<<<< HEAD
+=======
+	new->index = index;
+>>>>>>> 17f1fca40dd2bdcb9a987111c954833d17d211bf
 	new->next = NULL;
 
 	return (new);
@@ -181,7 +206,11 @@ char **list_to_array(const list_t *h)
 
 /**
   * free_array - frees an array of strings
+<<<<<<< HEAD
   * @arr: array
+=======
+  * arr: array
+>>>>>>> 17f1fca40dd2bdcb9a987111c954833d17d211bf
   */
 void free_array(char **arr)
 {
@@ -196,6 +225,7 @@ void free_array(char **arr)
 	}
 
 	arr = NULL;
+<<<<<<< HEAD
 }
 
 /**
@@ -297,3 +327,27 @@ int delete_node_index(list_t **head, int index)
 
 	return (0);
 }
+=======
+ }
+
+ /**
+  * print_list - prints all the elements of a list_t list in a given format
+  * @h: pointer to a list_t
+  *
+  * Return: number of nodes in given list_t
+  */
+ size_t print_list(const list_t *h)
+ {
+ 	size_t count = 0;
+
+ 	while (h != NULL)
+ 	{
+ 		printf("%s\n", h->name);
+
+ 		count++;
+ 		h = h->next;
+ 	}
+
+ 	return (count);
+ }
+>>>>>>> 17f1fca40dd2bdcb9a987111c954833d17d211bf

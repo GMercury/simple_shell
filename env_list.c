@@ -3,7 +3,11 @@
 /**
  * create_env - creates a list of environment variables
  * @env: array of environment variables
+<<<<<<< HEAD
  * @env_list: list of environmental variables
+=======
+ *
+>>>>>>> 17f1fca40dd2bdcb9a987111c954833d17d211bf
  * Return: new head of list. Otherwise NULL
  */
 list_t *create_env(char **env, list_t *env_list)
@@ -70,6 +74,7 @@ void print_env(list_t *env_list)
 
 	while (trav != NULL)
 	{
+<<<<<<< HEAD
 	  /*printf("[%d] ", trav->index);*/
 	  /*printf("%s=%s\n", trav->name, trav->value);*/
 
@@ -144,3 +149,11 @@ int _unsetenv(list_t *env_list, const char *name)
 
 	return (0);
 }
+=======
+		printf("%s=", trav->name);
+		printf("%s\n", trav->value);
+
+		trav = trav->next;
+	}
+}
+>>>>>>> 17f1fca40dd2bdcb9a987111c954833d17d211bf
