@@ -51,7 +51,7 @@ int _unsetenv(list_t *env_list, const char *name);
 
 /* lists.c */
 list_t *add_node_end(list_t **head, const char *name, const char *value);
-list_t *create_node(const char *name, const char *value, int index);
+list_t *create_node(const char *name, const char *value);
 list_t *split_string(char *str, char *delim);
 void free_node(list_t *h);
 void free_list(list_t *h);
@@ -78,7 +78,6 @@ int env_func(list_t *input_list, char *shell_name, list_t **env_list_ptr);
 int setenv_func(list_t *input_list, char *shell_name, list_t **env_list_ptr);
 int unsetenv_func(list_t *input_list, char *shell_name, list_t **env_list_ptr);
 
-
 /* which.c */
 char *get_full_name(char *name, list_t *env_list);
 char *get_full_path(char *filename, list_t *path_list);
@@ -94,6 +93,5 @@ char *_strtok(char *str, const char *delim);
 int is_in_str(const char *str, char c);
 int _atoi(char *str);
 void str_rep(char *str, char c1, char c2);
-
 
 #endif

@@ -3,11 +3,8 @@
 /**
  * create_env - creates a list of environment variables
  * @env: array of environment variables
-<<<<<<< HEAD
- * @env_list: list of environmental variables
-=======
+ * @env_list: list of environment variables
  *
->>>>>>> 17f1fca40dd2bdcb9a987111c954833d17d211bf
  * Return: new head of list. Otherwise NULL
  */
 list_t *create_env(char **env, list_t *env_list)
@@ -50,12 +47,10 @@ char *_getenv(list_t *env_list, char *name)
 		return (NULL);
 	}
 
-
 	while (trav && _strcmp(trav->name, name))  /* check each node for a match */
 	{
 		trav = trav->next;
 	}
-
 
 	if (trav)
 		return (trav->value);
@@ -70,20 +65,18 @@ char *_getenv(list_t *env_list, char *name)
 void print_env(list_t *env_list)
 {
 	list_t *trav = env_list;
-	/*unsigned int index = 0;*/
 
 	while (trav != NULL)
 	{
-<<<<<<< HEAD
-	  /*printf("[%d] ", trav->index);*/
-	  /*printf("%s=%s\n", trav->name, trav->value);*/
+		/*printf("[%d] ", trav->index);*/
+		/*printf("%s=%s\n", trav->name, trav->value);*/
 
-	  write(STDOUT_FILENO, trav->name, _strlen(trav->name) + 1);
-	  write(STDOUT_FILENO, "=", 2);
-	  write(STDOUT_FILENO, trav->value, _strlen(trav->value) + 1);
-	  write(STDOUT_FILENO, "\n", 2);
+		write(STDOUT_FILENO, trav->name, _strlen(trav->name) + 1);
+		write(STDOUT_FILENO, "=", 2);
+		write(STDOUT_FILENO, trav->value, _strlen(trav->value) + 1);
+		write(STDOUT_FILENO, "\n", 2);
 
-	  trav = trav->next;
+		trav = trav->next;
 	}
 }
 
@@ -149,11 +142,3 @@ int _unsetenv(list_t *env_list, const char *name)
 
 	return (0);
 }
-=======
-		printf("%s=", trav->name);
-		printf("%s\n", trav->value);
-
-		trav = trav->next;
-	}
-}
->>>>>>> 17f1fca40dd2bdcb9a987111c954833d17d211bf

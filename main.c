@@ -26,8 +26,8 @@ int main(int ac, char **av, char **env)
 	/*check return value of shell */
 	if (shell_return)
 	{
-	  free_list(env_list);
-	  exit(shell_return);
+		free_list(env_list);
+		exit(shell_return);
 	}
 
 	(void)ac;
