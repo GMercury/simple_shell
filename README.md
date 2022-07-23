@@ -42,5 +42,4 @@ Brief description of functions contained in project:
 - main: initialize program.
 
 ## Authors
-- Norris Selorm Bedzo | bedzon@ieee.org
-- Jonathan Abayie Boahene | jonathanboahene@gmail.com
+- Githinji King'ori | kingorigithinji@gmail.com
